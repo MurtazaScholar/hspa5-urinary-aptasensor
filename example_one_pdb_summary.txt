@@ -1,0 +1,19 @@
+Example data structure from one PDB complex
+=========================================
+PDB ID: 1EXD
+Aptamer chain: B
+Aptamer sequence: GGGGTATCGCCAAGCGGTAAGGCACCGGATTCTGATTCCGGAGGTCGAGGTTCGAATCCTCGTACCCCAGCCA
+Aptamer SS (P/U): UPPUUUUUPUUUUUPUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUPPUUUUUU
+Aptamer dot-bracket: .((.....(.....(..................................................((......
+Aptamer MFE: nan
+
+Example interaction row columns:
+pdb_id, prot_chain, dna_chain, aa_motif, aa_left, aa_right, aa_center, aa_len, nt_motif, nt_left, nt_right, nt_center, nt_len, ss_motif, combo, aa_start, nt_start, min_distance, distance_bin, interaction, interaction_score, sample_weight, aptamer_length, protein_length, aptamer_mfe, aptamer_dotbracket, nt_gc, nt_purine, nt_entropy, ss_paired_frac, nt_is_homopolymer, aa_charge_mean, aa_hydro_mean, aa_arom_frac, aa_pos_frac, aa_neg_frac, aa_entropy
+
+Interpretation:
+- nt_motif / aa_motif: nucleotide and amino-acid motif windows
+- combo: motif-length pairing such as nt1_aa2 or nt3_aa1
+- min_distance: minimum heavy-atom distance between the two motif windows
+- interaction: 1 if min_distance <= 12 Å, else sampled non-contact negative
+- interaction_score: distance-derived strength score for positives
+- ss_motif: aptamer secondary structure labels aligned to nt_motif
